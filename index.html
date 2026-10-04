@@ -306,7 +306,7 @@ form{display:flex;flex-direction:column;gap:16px;text-align:left;margin-top:18px
       <div class="dateblock" aria-label="Sábado, 14 de novembro de 2026, às 22 horas">
         <div>SÁBADO</div>
         <div class="d"><b>14</b><span>NOV · 2026</span></div>
-        <div>ÀS 22H</div>
+        <div>ÀS 21:30H</div>
       </div>
       <p class="place">Sítio Pôr do Sol<small>Rua Flor do Oriente, 328 · Jardim Recreio, Alvorada · Betim</small></p>
       <nav class="icons" aria-label="Opções do convite">
@@ -322,8 +322,8 @@ form{display:flex;flex-direction:column;gap:16px;text-align:left;margin-top:18px
         <div><b id="cd-s">--</b><span>SEG</span></div>
       </div>
       <p class="count-label" id="count-label">para a grande noite</p>
-      <p class="dress">TRAJE SOCIAL · AZUL, AMARELO E BRANCO <span aria-hidden="true"><i style="background:#FBF1C4"></i><i style="background:#86A3D8"></i><i style="background:#FFFFFF"></i></span></p>
-      <p class="teaser" id="teaser" hidden>E no domingo tem piscina o dia todo! <a href="#s-fds" data-go="s-fds">Saiba mais</a></p>
+      <p class="dress"> AZUL, AMARELO E BRANCO <span aria-hidden="true"><i style="background:#FBF1C4"></i><i style="background:#86A3D8"></i><i style="background:#FFFFFF"></i></span></p>
+      <p class="teaser" id="teaser" hidden>E no domingo tem piscina a partir das 10Hrs! <a href="#s-fds" data-go="s-fds">Saiba mais</a></p>
       <div class="more" aria-hidden="true">ROLE PARA VER MAIS<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D8194" stroke-width="1.6" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div>
     </div>
   </section>
@@ -344,8 +344,8 @@ form{display:flex;flex-direction:column;gap:16px;text-align:left;margin-top:18px
         <article>
           <svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="11" r="5"/><path d="M18 1.5V3.5M18 18.5V20.5M8.5 11H6.5M29.5 11H27.5M11.3 4.3L12.7 5.7M24.7 4.3L23.3 5.7"/><path d="M2 26 C6 23 10 23 14 26 S22 29 26 26 S32 23 34 25"/><path d="M2 32 C6 29 10 29 14 32 S22 35 26 32 S32 29 34 31"/></svg>
           <small>DOMINGO · 15 DE NOVEMBRO</small>
-          <h3>Piscina o dia todo</h3>
-          <p>Quem quiser pode ficar ou voltar no domingo para curtir a piscina durante o dia. Traga roupa de banho, toalha e protetor solar.</p>
+          <h3>Piscina a partir das 10Hrs</h3>
+          <p>Quem quiser pode ficar ou voltar no domingo para curtir a piscina durante o dia. Traga 1 Quilo de carne e não esqueço a roupa de banho, toalha e protetor solar.</p>
         </article>
       </div>
       <p class="sub" style="margin-top:18px">Avise na confirmação se você vai dormir lá ou ir no domingo.</p>
@@ -374,7 +374,7 @@ form{display:flex;flex-direction:column;gap:16px;text-align:left;margin-top:18px
           </div>
         </div>
         <div class="row2" id="qtd">
-          <div class="f"><span class="lbl">ADULTOS</span>
+          <div class="f"><span class="lbl">QUANTIDADE DE CONVIDADOS CONFIRMADOS</span>
             <div class="stepper"><button type="button" data-step="adultos" data-d="-1" aria-label="Menos um adulto">−</button><output id="adultos">1</output><button type="button" data-step="adultos" data-d="1" aria-label="Mais um adulto">+</button></div></div>
           <div class="f" id="boxCriancas"><span class="lbl">CRIANÇAS</span>
             <div class="stepper"><button type="button" data-step="criancas" data-d="-1" aria-label="Menos uma criança">−</button><output id="criancas">0</output><button type="button" data-step="criancas" data-d="1" aria-label="Mais uma criança">+</button></div></div>
@@ -425,7 +425,7 @@ form{display:flex;flex-direction:column;gap:16px;text-align:left;margin-top:18px
   const WHATS='5531997847088';
   // Endereço do app do cerimonial (termina em /exec). Usado quando o convite fica no site próprio (GitHub).
   const API='https://script.google.com/macros/s/AKfycbzaU4B5f1jKeCVu0cv81_hQXt_mbidIUjH8c6JobNolkr91J1IIVbORowREdjb8S5mWRw/exec';
-  const PRESENTES=['Roupas tamanho PP, P ou 14 anos','Calçados número 36','Acessórios','Perfumes','Maquiagem','Produtos de cabelo','Livros','Bolsas'];
+  const PRESENTES=['Roupas tamanho PP, P ou 14 anos','Calçados número 37','Acessórios','Perfumes','Maquiagem','Livros','Bolsas'];
 
   /* ====== IMAGENS PRÓPRIAS (opcional) ======
      Para usar artes feitas no Canva no lugar dos desenhos: salve a imagem no Google Drive,
