@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<base target="_top">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#FFFFFF">
+<meta property="og:title" content="15 Anos da Julya Charlotte">
+<meta property="og:description" content="Sábado, 14 de novembro de 2026 · 21:30h · Sítio Pôr do Sol, Betim. Abra o convite e confirme sua presença.">
+<title>15 Anos da Julya Charlotte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500;600&display=swap">
+<style>
+/* Convite em papel claro com moldura de aquarela marinha (conchas, estrelas, corais, águas-vivas) desenhada em SVG.
+   Telas cheias de celular: envelope de portas -> convite -> confirmação -> presentes. Visual único de papel, de propósito. */
+:root{
+  --paper:#FFFFFF; --page:#FFFFFF; --ink:#1B2A78; --ink-2:#34489A; --text:#4A4D5C; --muted:#7D8194;
+  --b1:#E6EDF8; --b2:#C3D4EF; --b3:#86A3D8; --b4:#4867B4; --b5:#1D2C78; --fleck:#C2A05C; --ok:#2E7A55; --bad:#A83A3A;
+  --script:"Pinyon Script","Great Vibes","Brush Script MT",cursive;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --caps:"Cinzel","Trajan Pro",Georgia,serif;
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .42 0 0 0 0 .40 0 0 0 0 .36 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color-scheme:only light; /* o celular no modo escuro não pode escurecer o convite */
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+html{background:#FFFFFF;color-scheme:only light}
+body{background:var(--page);color:var(--text);font-family:var(--serif);font-size:19px;line-height:1.45;-webkit-font-smoothing:antialiased}
+body.locked{overflow:hidden;height:100%}
+button,input,textarea{font:inherit;color:inherit}
+[hidden]{display:none!important}
+.paper{background-color:#FFFFFF;background-image:var(--noise)}
+
+/* moldura desenhada uma vez só como imagem (leve para rolar no celular) */
+.deco{position:absolute;inset:0;pointer-events:none;z-index:0;background-repeat:no-repeat;background-size:100% 100%;background-position:0 0}
+.spark{position:absolute;display:block;pointer-events:none;background:radial-gradient(circle,#FFF8DA 0,#E8C46E 38%,rgba(226,190,106,0) 72%);clip-path:polygon(50% 0,58% 42%,100% 50%,58% 58%,50% 100%,42% 58%,0 50%,42% 42%)}
+@media (prefers-reduced-motion:no-preference){.spark{animation:tw 3.2s ease-in-out infinite}}
+
+/* brilho: pontinhos dourados que piscam */
+.tw{transform-box:fill-box;transform-origin:center}
+@media (prefers-reduced-motion:no-preference){.tw{animation:tw 3.2s ease-in-out infinite}}
+@keyframes tw{0%,100%{opacity:.25;transform:scale(.55)}50%{opacity:1;transform:scale(1)}}
+
+/* convite personalizado */
+.for{margin:10px 0 0;font-style:italic;color:var(--text);font-size:17px}
+.for b{display:block;font-style:normal;font-family:var(--caps);font-weight:500;letter-spacing:.12em;font-size:15px;color:var(--ink);margin-top:2px}
+.env-for{display:block;font-family:var(--serif);font-style:italic;font-size:17px;color:var(--text);margin-top:6px}
+.reserva{margin:0;text-align:center;background:rgba(195,212,239,.45);border:1px solid rgba(255,255,255,.9);border-radius:14px;padding:10px 12px;color:var(--ink);font-size:17px}
+.reserva b{font-family:var(--caps);font-weight:500;letter-spacing:.06em}
+
+/* fim de semana */
+.wk{display:flex;flex-direction:column;gap:14px;margin:20px auto 0;max-width:330px;text-align:left}
+.wk article{background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(214,226,245,.6));border:1px solid rgba(255,255,255,.95);border-radius:18px;padding:16px 16px 16px 66px;position:relative;box-shadow:0 12px 24px -18px rgba(27,42,120,.8)}
+.wk article svg{position:absolute;left:16px;top:16px;width:36px;height:36px;stroke:var(--ink);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.wk small{font-family:var(--caps);font-size:11px;letter-spacing:.18em;color:var(--ink-2)}
+.wk h3{margin:2px 0 4px;font-family:var(--script);font-weight:400;font-size:30px;line-height:1.1;color:var(--ink)}
+.wk p{margin:0;font-size:17px;line-height:1.35}
+.teaser{margin:12px 0 0;font-size:16px;color:var(--ink-2);font-style:italic}
+.teaser a{color:inherit}
+
+/* opções extras da confirmação */
+.checks{display:flex;flex-direction:column;gap:8px}
+.check{display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:17px;line-height:1.3;background:rgba(255,255,255,.7);border:1px solid var(--b2);border-radius:14px;padding:10px 12px}
+.check input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--ink);flex:none}
+.book{max-width:480px;margin:0 auto;box-shadow:0 0 60px -20px rgba(27,42,120,.35)}
+
+/* ---------- Telas ---------- */
+.screen{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;isolation:isolate}
+.screen + .screen{border-top:1px solid rgba(27,42,120,.08)}
+.content{position:relative;z-index:1;width:100%;text-align:center;padding:96px 72px}
+
+.eyebrow{font-family:var(--caps);letter-spacing:.32em;font-size:15px;color:var(--ink);margin:0}
+.name{font-family:var(--script);font-weight:400;font-size:clamp(52px,15vw,74px);line-height:1.02;color:var(--ink);margin:4px 0 0;text-wrap:balance}
+.intro{font-style:italic;font-size:18px;color:var(--text);margin:14px auto 0;max-width:30ch;text-wrap:balance}
+.dateblock{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;margin:20px auto 0;max-width:300px}
+.dateblock > div{font-family:var(--caps);font-size:14px;letter-spacing:.14em;color:var(--ink-2)}
+.dateblock > div:first-child{border-right:1px solid var(--b3);padding-right:10px}
+.dateblock > div:last-child{border-left:1px solid var(--b3);padding-left:10px}
+.dateblock .d{padding-inline:14px;display:flex;flex-direction:column;align-items:center;line-height:1}
+.dateblock .d b{font-family:var(--caps);font-weight:500;font-size:46px;color:var(--ink);letter-spacing:0}
+.dateblock .d span{font-size:11px;letter-spacing:.2em;margin-top:4px}
+.place{margin:16px 0 0;color:var(--ink-2);font-weight:600;font-size:19px;line-height:1.25}
+.place small{display:block;font-weight:400;color:var(--text);font-size:15px;margin-top:4px}
+.icons{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:22px auto 0;max-width:320px}
+.ic{display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;color:var(--ink);font-family:var(--caps);font-size:10.5px;letter-spacing:.12em;cursor:pointer;background:none;border:0;padding:0}
+.ic i{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 35% 30%,#FFFFFF,var(--b1) 70%);border:1.5px solid var(--b3);box-shadow:0 6px 14px -8px rgba(27,42,120,.45);transition:transform .2s,border-color .2s}
+.ic svg{width:24px;height:24px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ic:hover i{transform:translateY(-2px);border-color:var(--ink)}
+.ic:focus-visible{outline:none}.ic:focus-visible i{outline:2px solid var(--ink);outline-offset:3px}
+.count{display:flex;justify-content:center;gap:16px;margin-top:20px}
+.count div{display:flex;flex-direction:column;align-items:center;min-width:44px}
+.count b{font-family:var(--caps);font-weight:500;font-size:24px;color:var(--ink);font-variant-numeric:tabular-nums lining-nums;line-height:1.1}
+.count span{font-family:var(--caps);font-size:9.5px;letter-spacing:.2em;color:var(--muted)}
+.count-label{margin:4px 0 0;font-style:italic;font-size:15px;color:var(--muted)}
+.dress{margin:14px 0 0;font-family:var(--caps);font-size:12px;letter-spacing:.18em;color:var(--ink-2)}
+.dress span{display:inline-flex;gap:5px;vertical-align:middle;margin-left:6px}
+.dress span i{width:12px;height:12px;border-radius:50%;border:1px solid var(--b3);display:inline-block}
+.more{margin-top:18px;font-family:var(--caps);font-size:10px;letter-spacing:.24em;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:2px}
+@media (prefers-reduced-motion:no-preference){.more svg{animation:bob 2s ease-in-out infinite}}
+@keyframes bob{50%{transform:translateY(4px)}}
+
+h2.t{font-family:var(--script);font-weight:400;font-size:clamp(42px,12vw,54px);color:var(--ink);margin:0;line-height:1.05}
+.sub{font-style:italic;color:var(--muted);font-size:17px;margin:6px auto 0;max-width:30ch}
+
+/* ---------- Confirmação ---------- */
+form{display:flex;flex-direction:column;gap:16px;text-align:left;margin-top:18px}
+.f{display:flex;flex-direction:column;gap:6px}
+.f label,.f .lbl{font-family:var(--caps);font-size:11px;letter-spacing:.18em;color:var(--ink-2)}
+.f input,.f textarea{width:100%;border:1px solid var(--b2);background:rgba(255,255,255,.7);padding:10px 14px;font-size:19px;color:var(--ink);border-radius:999px}
+.f textarea{border-radius:18px;resize:vertical;min-height:76px;font-size:17px}
+.f input:focus,.f textarea:focus{outline:2px solid var(--b3);outline-offset:1px;border-color:transparent}
+.f input::placeholder,.f textarea::placeholder{color:#A6ACBE;font-style:italic}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice label{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:11px 8px;border-radius:999px;border:1px solid var(--b2);background:rgba(255,255,255,.7);cursor:pointer;font-family:var(--serif);font-size:18px;letter-spacing:0;color:var(--text);transition:all .2s}
+.choice input{position:absolute;opacity:0;pointer-events:none}
+.choice label.on{background:var(--ink);border-color:var(--ink);color:#FFFFFF}
+.choice label:focus-within{outline:2px solid var(--b3);outline-offset:2px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stepper{display:flex;align-items:center;justify-content:space-between;border:1px solid var(--b2);background:rgba(255,255,255,.7);border-radius:999px;padding:4px}
+.stepper button{width:36px;height:36px;border-radius:50%;border:0;background:var(--b1);color:var(--ink);font-size:20px;cursor:pointer;line-height:1}
+.stepper button:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
+.stepper output{font-family:var(--caps);font-size:20px;color:var(--ink);font-variant-numeric:tabular-nums}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.send{border:0;border-radius:999px;background:var(--ink);color:#FFFFFF;font-family:var(--caps);letter-spacing:.22em;font-size:14px;padding:15px;cursor:pointer;box-shadow:0 10px 20px -12px rgba(27,42,120,.8);transition:background .2s}
+.send:hover{background:var(--ink-2)}
+.send:disabled{opacity:.6;cursor:wait}
+.send:focus-visible{outline:2px solid var(--b3);outline-offset:3px}
+.err{color:var(--bad);font-size:16px;min-height:1.2em;margin:0;text-align:center}
+.alt{font-size:16px;color:var(--muted);text-align:center;margin:0}
+.alt a{color:var(--ink-2)}
+.done{padding-top:18px}
+.done .big{font-family:var(--script);font-size:44px;color:var(--ink);line-height:1.1;margin:0}
+.done p{margin:8px auto 0;max-width:30ch}
+.again{background:none;border:0;color:var(--ink-2);text-decoration:underline;cursor:pointer;margin-top:14px;font-size:16px}
+
+/* ---------- Presentes ---------- */
+.gifts{display:flex;flex-direction:column;gap:10px;margin:20px auto 0;max-width:300px;padding:0;list-style:none}
+.gifts li{background:linear-gradient(180deg,rgba(195,212,239,.75),rgba(134,163,216,.55));border:1px solid rgba(255,255,255,.8);border-radius:14px;padding:11px 14px;font-family:var(--caps);font-size:13.5px;letter-spacing:.1em;color:var(--ink);box-shadow:0 8px 16px -14px rgba(27,42,120,.9)}
+.gift-note{margin:18px auto 0;font-style:italic;color:var(--text);max-width:28ch}
+.wa{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:9px 16px;border-radius:999px;background:var(--ink);color:#FFFFFF;text-decoration:none;font-size:16px;letter-spacing:.02em}
+.wa svg{width:18px;height:18px;fill:#FFFFFF}
+
+/* ---------- Envelope de portas ---------- */
+.cover{position:fixed;inset:0;z-index:20;background:var(--page)}
+.cover.gone{display:none}
+.env{position:relative;height:100%;max-width:480px;margin:0 auto;perspective:1800px}
+.door{position:absolute;top:0;bottom:0;width:50%;overflow:hidden;transition:transform 1.6s cubic-bezier(.65,0,.25,1),opacity .5s ease 1.15s;will-change:transform}
+.door.left{left:0;transform-origin:left center;box-shadow:inset -14px 0 18px -14px rgba(27,42,120,.35)}
+.door.right{right:0;transform-origin:right center;box-shadow:inset 14px 0 18px -14px rgba(27,42,120,.35)}
+.door.right::before{content:"";position:absolute;left:0;top:0;bottom:0;width:1px;background:rgba(27,42,120,.14);z-index:2}
+.door .art{position:absolute;top:0;bottom:0;width:200%}
+.door.left .art{left:0}.door.right .art{right:0}
+.env-title{position:absolute;left:0;right:0;top:15%;text-align:center;z-index:1}
+.env-title span{font-family:var(--caps);letter-spacing:.34em;font-size:14px;color:var(--ink)}
+.env-title b{display:block;font-family:var(--script);font-weight:400;font-size:clamp(44px,13vw,60px);color:var(--ink);line-height:1.05;margin-top:4px}
+.seal{position:absolute;left:50%;top:52%;width:210px;height:210px;margin:-105px 0 0 -105px;border:0;background:none;padding:0;cursor:pointer;z-index:3;border-radius:50%;transition:transform .6s ease,opacity .5s ease}
+.seal:focus-visible{outline:2px solid var(--ink);outline-offset:-30px}
+.seal svg{width:100%;height:100%;overflow:visible}
+.seal .ring{transform-origin:100px 100px}
+@media (prefers-reduced-motion:no-preference){.seal .ring{animation:spin 40s linear infinite}.seal .wax{animation:breathe 2.6s ease-in-out infinite;transform-origin:100px 100px}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes breathe{50%{transform:scale(1.035)}}
+.cover.open .seal{opacity:0;transform:scale(1.2)}
+.cover.open .door.left{transform:rotateY(-82deg);opacity:0}
+.cover.open .door.right{transform:rotateY(82deg);opacity:0}
+@media (prefers-reduced-motion:reduce){.door,.seal{transition:opacity .4s ease}.cover.open .door.left,.cover.open .door.right{transform:none}}
+
+@media (max-width:360px){.content{padding-inline:56px}.icons{gap:2px}.ic i{width:48px;height:48px}}
+</style>
+</head>
+<body class="locked">
+
+
+
+
+<!-- Desenhos de aquarela (usados em todas as telas) -->
+<svg id="art-defs" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gL" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EEF4FD"/><stop offset=".6" stop-color="#A9C3EE"/><stop offset="1" stop-color="#6F93DA"/></linearGradient>
+    <linearGradient id="gM" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#DCE8FA"/><stop offset=".45" stop-color="#7FA2E6"/><stop offset="1" stop-color="#2A4FB3"/></linearGradient>
+    <linearGradient id="gD" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8FB0EE"/><stop offset=".4" stop-color="#3159C4"/><stop offset=".8" stop-color="#162C8C"/><stop offset="1" stop-color="#0C1A5C"/></linearGradient>
+    <radialGradient id="gP" cx="34%" cy="30%" r="72%"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".35" stop-color="#F6F1F8"/><stop offset=".65" stop-color="#DCD6EA"/><stop offset=".85" stop-color="#B9C2DE"/><stop offset="1" stop-color="#8E97B8"/></radialGradient>
+    <filter id="wash" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="60" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feGaussianBlur in="d" stdDeviation="7"/>
+    </filter>
+    <radialGradient id="gWax" cx="38%" cy="34%" r="70%"><stop offset="0" stop-color="#5D74C9"/><stop offset=".55" stop-color="#2A3B97"/><stop offset="1" stop-color="#141C5C"/></radialGradient>
+
+    <filter id="wc" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" seed="3" result="g"/>
+      <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -0.9 1.25" result="ga"/>
+      <feComposite in="d" in2="ga" operator="in" result="p"/>
+      <feGaussianBlur in="p" stdDeviation="2" result="b"/>
+      <feSpecularLighting in="b" surfaceScale="3" specularConstant=".9" specularExponent="22" lighting-color="#FFFFFF" result="s">
+        <feDistantLight azimuth="225" elevation="48"/>
+      </feSpecularLighting>
+      <feComposite in="s" in2="p" operator="in" result="sp"/>
+      <feComposite in="p" in2="sp" operator="arithmetic" k1="0" k2="1" k3=".55" k4="0"/>
+    </filter>
+    <filter id="washLite" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="9"/></filter>
+    <radialGradient id="gGold" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#FFF4C9"/><stop offset=".45" stop-color="#E2BE6A"/><stop offset="1" stop-color="#9C7428"/></radialGradient>
+    <filter id="waxEdge" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <symbol id="scallop" viewBox="0 0 100 100">
+      <path style="fill:var(--f)" d="M50 88 L11 44 Q10 34 18 30 Q20 21 29 19 Q34 11 43 12 Q50 5 57 12 Q66 11 71 19 Q80 21 82 30 Q90 34 89 44 Z"/>
+      <path style="fill:var(--f)" d="M37 83 L50 97 L63 83 Z"/>
+      <g stroke="#FFFFFF" stroke-opacity=".6" stroke-width="1.7" fill="none" stroke-linecap="round"><path d="M50 88 L15 40 M50 88 L23 27 M50 88 L34 17 M50 88 L45 11 M50 88 L56 11 M50 88 L67 17 M50 88 L78 27 M50 88 L86 40"/></g>
+    </symbol>
+    <symbol id="nautilus" viewBox="0 0 100 100">
+      <path style="fill:var(--f)" d="M50 8 C76 8 94 28 92 54 C90 78 70 94 46 92 C24 90 8 72 10 50 C12 26 28 8 50 8Z"/>
+      <path d="M46 50 C40 52 40 61 46 64 C54 68 64 62 66 52 C68 40 60 28 46 26 C30 24 16 34 14 52 C12 72 28 88 48 90" fill="none" stroke="#FFFFFF" stroke-opacity=".65" stroke-width="2.2" stroke-linecap="round"/>
+      <g stroke="#FFFFFF" stroke-opacity=".35" stroke-width="1.2"><path d="M66 52 L90 50 M60 32 L76 14 M42 26 L36 10 M18 42 L4 36 M22 74 L12 84 M48 90 L50 96"/></g>
+    </symbol>
+    <symbol id="conch" viewBox="0 0 100 100">
+      <path style="fill:var(--f)" d="M50 4 C58 10 66 22 74 34 C84 48 86 62 80 74 C74 86 62 96 50 96 C42 92 34 84 30 74 C24 60 26 46 34 32 C40 20 44 12 50 4Z"/>
+      <g stroke="#FFFFFF" stroke-opacity=".55" stroke-width="1.8" fill="none" stroke-linecap="round"><path d="M40 24 Q54 28 66 24 M33 40 Q56 46 78 40 M29 56 Q56 64 83 56 M32 72 Q56 80 80 72"/></g>
+      <path d="M52 58 C62 64 66 80 58 92 C52 88 49 76 52 58Z" fill="#FFFFFF" fill-opacity=".35"/>
+    </symbol>
+    <symbol id="coral" viewBox="0 0 100 100">
+      <g fill="none" style="stroke:var(--f)" stroke-linecap="round">
+        <path stroke-width="7" d="M50 99 C50 84 48 72 42 60"/>
+        <path stroke-width="5" d="M42 60 C36 50 28 44 20 40 M42 60 C46 48 54 40 58 26 M56 34 C64 32 72 34 80 26 M58 26 C58 18 62 12 68 8 M30 46 C26 36 28 26 24 16 M20 40 C14 40 10 34 8 28"/>
+        <path stroke-width="3.2" d="M80 26 C84 22 86 18 86 12 M24 16 C22 12 22 8 24 4 M68 8 L72 4 M8 28 L6 22"/>
+      </g>
+    </symbol>
+    <symbol id="weed" viewBox="0 0 100 100">
+      <g fill="none" style="stroke:var(--f)" stroke-linecap="round">
+        <path stroke-width="6" d="M50 99 C38 82 62 68 48 52 C36 38 60 26 52 6"/>
+        <path stroke-width="4" d="M48 72 C34 66 30 56 34 46 M52 42 C64 38 70 30 68 20 M46 58 C58 56 64 50 66 42"/>
+      </g>
+    </symbol>
+    <symbol id="jelly" viewBox="0 0 100 100">
+      <path style="fill:var(--f)" d="M20 42 C20 20 34 8 50 8 C66 8 80 20 80 42 C72 46 66 40 60 45 C54 40 46 40 40 45 C34 40 28 46 20 42Z"/>
+      <path d="M30 22 C36 14 46 12 54 14" fill="none" stroke="#FFFFFF" stroke-opacity=".6" stroke-width="2.5" stroke-linecap="round"/>
+      <g fill="none" style="stroke:var(--f)" stroke-width="2.2" stroke-linecap="round"><path d="M30 46 C26 60 36 68 30 82 C27 90 32 95 30 99 M42 47 C40 62 48 70 42 88 M50 46 C52 60 46 72 52 94 M58 47 C60 62 54 72 60 90 M70 46 C74 60 64 68 70 84"/></g>
+    </symbol>
+    <symbol id="dollar" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40" style="fill:var(--f)"/>
+      <g fill="#FFFFFF" fill-opacity=".5"><ellipse cx="50" cy="32" rx="4.5" ry="12"/><ellipse cx="50" cy="32" rx="4.5" ry="12" transform="rotate(72 50 50)"/><ellipse cx="50" cy="32" rx="4.5" ry="12" transform="rotate(144 50 50)"/><ellipse cx="50" cy="32" rx="4.5" ry="12" transform="rotate(216 50 50)"/><ellipse cx="50" cy="32" rx="4.5" ry="12" transform="rotate(288 50 50)"/></g>
+      <circle cx="50" cy="50" r="3" fill="#FFFFFF" fill-opacity=".6"/>
+    </symbol>
+    <symbol id="pearl" viewBox="0 0 100 100"><ellipse cx="54" cy="92" rx="30" ry="6" fill="#1D2C78" fill-opacity=".12"/><circle cx="50" cy="48" r="42" fill="url(#gP)"/><circle cx="50" cy="48" r="42" fill="none" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/><ellipse cx="36" cy="32" rx="11" ry="8" fill="#FFFFFF" fill-opacity=".9" transform="rotate(-30 36 32)"/><circle cx="64" cy="66" r="6" fill="#FFFFFF" fill-opacity=".35"/></symbol>
+    <symbol id="turtle" viewBox="0 0 100 100">
+      <g style="fill:var(--f)">
+        <path d="M31 40 C16 30 6 32 3 40 C12 46 22 46 32 48Z"/><path d="M69 40 C84 30 94 32 97 40 C88 46 78 46 68 48Z"/>
+        <path d="M34 72 C24 76 18 84 20 90 C28 88 34 82 38 76Z"/><path d="M66 72 C76 76 82 84 80 90 C72 88 66 82 62 76Z"/>
+        <ellipse cx="50" cy="17" rx="8" ry="10"/><path d="M47 84 L50 96 L53 84Z"/>
+        <ellipse cx="50" cy="55" rx="23" ry="30"/>
+      </g>
+      <g fill="none" stroke="#FFFFFF" stroke-opacity=".6" stroke-width="1.6" stroke-linejoin="round">
+        <path d="M50 38 L60 44 L60 56 L50 62 L40 56 L40 44Z"/>
+        <path d="M50 26 L50 38 M60 44 L70 38 M60 56 L71 63 M50 62 L50 84 M40 56 L29 63 M40 44 L30 38"/>
+      </g>
+      <circle cx="46" cy="14" r="1.6" fill="#0C1A5C"/><circle cx="54" cy="14" r="1.6" fill="#0C1A5C"/>
+    </symbol>
+    <symbol id="flower" viewBox="0 0 100 100">
+      <g style="fill:var(--f)">
+        <ellipse cx="50" cy="27" rx="17" ry="24"/><ellipse cx="50" cy="27" rx="17" ry="24" transform="rotate(72 50 50)"/><ellipse cx="50" cy="27" rx="17" ry="24" transform="rotate(144 50 50)"/><ellipse cx="50" cy="27" rx="17" ry="24" transform="rotate(216 50 50)"/><ellipse cx="50" cy="27" rx="17" ry="24" transform="rotate(288 50 50)"/>
+      </g>
+      <g stroke="#FFFFFF" stroke-opacity=".5" stroke-width="1.4" fill="none" stroke-linecap="round"><path d="M50 50 L50 12 M50 50 L86 38 M50 50 L72 81 M50 50 L28 81 M50 50 L14 38"/></g>
+      <circle cx="50" cy="50" r="7" fill="#FFFFFF" fill-opacity=".85"/>
+      <g fill="#E2BE6A"><circle cx="50" cy="40" r="2"/><circle cx="58" cy="45" r="1.8"/><circle cx="42" cy="45" r="1.8"/></g>
+    </symbol>
+    <symbol id="star" viewBox="0 0 100 100"><path id="starPath" style="fill:var(--f)" d=""/><g id="starDots" fill="#FFFFFF" fill-opacity=".6"></g></symbol>
+  </defs>
+</svg>
+
+<!-- Envelope -->
+<div class="cover" id="cover">
+  <div class="env" id="env">
+    <div class="door left paper"><div class="art"><div class="deco" data-mode="env" data-seed="15"></div><div class="env-title"><span>XV ANOS</span><b>Julya Charlotte</b><em class="env-for" hidden></em></div></div></div>
+    <div class="door right paper"><div class="art"><div class="deco" data-mode="env" data-seed="15"></div><div class="env-title"><span>XV ANOS</span><b>Julya Charlotte</b><em class="env-for" hidden></em></div></div></div>
+    <button class="seal" id="seal" aria-label="Toque para abrir o convite">
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="ringPath" d="M100 100 m-84 0 a84 84 0 1 1 168 0 a84 84 0 1 1 -168 0"/></defs>
+        <g class="ring"><text font-family="Cinzel, Georgia, serif" font-size="12.5" letter-spacing="4.2" fill="#1B2A78"><textPath href="#ringPath">TOQUE PARA ABRIR · TOQUE PARA ABRIR · TOQUE PARA ABRIR ·</textPath></text></g>
+        <g class="wax">
+          <circle cx="100" cy="100" r="60" fill="url(#gWax)" filter="url(#waxEdge)"/>
+          <circle cx="100" cy="100" r="45" fill="none" stroke="#8EA3E0" stroke-opacity=".55" stroke-width="2"/>
+          <circle cx="100" cy="100" r="41" fill="none" stroke="#0E1446" stroke-opacity=".45" stroke-width="1.5"/>
+          <text x="100" y="113" text-anchor="middle" font-family="Pinyon Script, cursive" font-size="40" fill="#A9BAEC" fill-opacity=".95">JC</text>
+          <path d="M66 76 C74 64 88 58 100 58" fill="none" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="5" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<div class="book">
+  <!-- Tela principal -->
+  <section class="screen paper" id="s-main">
+    <div class="deco" data-mode="frame" data-seed="3"></div>
+    <div class="content">
+      <p class="eyebrow">XV ANOS</p>
+      <h1 class="name">Julya Charlotte</h1>
+      <p class="for" id="forMain" hidden>Convite especial para<b id="forName"></b></p>
+      <p class="intro">Sonhe como o mar, profundo, livre e infinito.</p>
+      <div class="dateblock" aria-label="Sábado, 14 de novembro de 2026, às 21:30 horas">
+        <div>SÁBADO</div>
+        <div class="d"><b>14</b><span>NOV · 2026</span></div>
+        <div>ÀS 22H</div>
+      </div>
+      <p class="place">Sítio Pôr do Sol<small>Rua Flor do Oriente, 328 · Jardim Recreio, Alvorada · Betim</small></p>
+      <nav class="icons" aria-label="Opções do convite">
+        <a class="ic" id="maps" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></i>LOCAL</a>
+        <a class="ic" id="agenda" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></i>AGENDA</a>
+        <a class="ic" href="#s-rsvp" data-go="s-rsvp"><i><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>CONFIRMAR</a>
+        <a class="ic" href="#s-gifts" data-go="s-gifts"><i><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="1"/><path d="M3 7h18v3H3zM12 7v13M12 7C10 3 6 4 7.5 6.5 8.5 8 12 7 12 7zM12 7c2-4 6-3 4.5-.5C15.5 8 12 7 12 7z"/></svg></i>PRESENTES</a>
+      </nav>
+      <div class="count" id="count" aria-label="Contagem regressiva">
+        <div><b id="cd-d">--</b><span>DIAS</span></div>
+        <div><b id="cd-h">--</b><span>HORAS</span></div>
+        <div><b id="cd-m">--</b><span>MIN</span></div>
+        <div><b id="cd-s">--</b><span>SEG</span></div>
+      </div>
+      <p class="count-label" id="count-label">para a grande noite</p>
+      <p class="dress"> AZUL, AMARELO E BRANCO <span aria-hidden="true"><i style="background:#FBF1C4"></i><i style="background:#86A3D8"></i><i style="background:#FFFFFF"></i></span></p>
+      <p class="teaser" id="teaser" hidden>E no domingo tem piscina o dia todo! <a href="#s-fds" data-go="s-fds">Saiba mais</a></p>
+      <div class="more" aria-hidden="true">ROLE PARA VER MAIS<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D8194" stroke-width="1.6" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div>
+    </div>
+  </section>
+
+  <!-- Fim de semana -->
+  <section class="screen paper" id="s-fds" hidden>
+    <div class="deco" data-mode="corners" data-seed="5"></div>
+    <div class="content">
+      <h2 class="t">Fim de semana no sítio</h2>
+      <p class="sub">A festa não acaba no sábado. Fique à vontade para aproveitar!</p>
+      <div class="wk">
+        <article>
+          <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M3 31 L18 6 L33 31 Z"/><path d="M18 6 V31 M13 31 L18 20 L23 31"/><path d="M1 31 H35"/></svg>
+          <small>SÁBADO · 14 DE NOVEMBRO</small>
+          <h3>Quer dormir lá?</h3>
+          <p>Tem espaço no sítio para montar barraca. Traga sua barraca e o que precisar para dormir, como colchonete, travesseiro e roupa de cama.</p>
+        </article>
+        <article>
+          <svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="11" r="5"/><path d="M18 1.5V3.5M18 18.5V20.5M8.5 11H6.5M29.5 11H27.5M11.3 4.3L12.7 5.7M24.7 4.3L23.3 5.7"/><path d="M2 26 C6 23 10 23 14 26 S22 29 26 26 S32 23 34 25"/><path d="M2 32 C6 29 10 29 14 32 S22 35 26 32 S32 29 34 31"/></svg>
+          <small>DOMINGO · 15 DE NOVEMBRO</small>
+          <h3>Piscina a partir das 10H</h3>
+          <p>Quem quiser pode ficar ou voltar no domingo para curtir a piscina durante o dia. Traga um quilo de carne e não esuqeça a roupa de banho, toalha e protetor solar.</p>
+        </article>
+      </div>
+      <p class="sub" style="margin-top:18px">Avise na confirmação se você vai dormir lá ou ir no domingo.</p>
+    </div>
+  </section>
+
+  <!-- Confirmação -->
+  <section class="screen paper" id="s-rsvp">
+    <div class="deco" data-mode="corners" data-seed="8"></div>
+    <div class="content">
+      <h2 class="t">Confirme sua presença</h2>
+      <p class="sub">Sua resposta ajuda muito na organização da festa.</p>
+      <form id="form" novalidate>
+        <p class="reserva" id="reserva" hidden></p>
+        <div class="f" id="nomeBox">
+          <label for="nome">SEU NOME COMPLETO</label>
+          <input id="nome" name="nome" autocomplete="name" maxlength="80" placeholder="Nome e sobrenome" required>
+          <button type="button" class="send" id="buscar" style="margin-top:8px">ENCONTRAR MEU CONVITE</button>
+        </div>
+        <div id="resto" hidden style="display:flex;flex-direction:column;gap:16px">
+        <div class="f">
+          <span class="lbl" id="vaiLbl">VOCÊ VAI?</span>
+          <div class="choice" role="radiogroup" aria-labelledby="vaiLbl">
+            <label><input type="radio" name="vai" value="sim" id="vai-sim" checked>Sim, eu vou!</label>
+            <label><input type="radio" name="vai" value="nao" id="vai-nao">Não poderei ir</label>
+          </div>
+        </div>
+        <div class="row2" id="qtd">
+          <div class="f"><span class="lbl">QUANTIDADE DE CONVIDADOS CONFIRMADOS</span>
+            <div class="stepper"><button type="button" data-step="adultos" data-d="-1" aria-label="Menos um adulto">−</button><output id="adultos">1</output><button type="button" data-step="adultos" data-d="1" aria-label="Mais um adulto">+</button></div></div>
+          <div class="f" id="boxCriancas"><span class="lbl">CRIANÇAS</span>
+            <div class="stepper"><button type="button" data-step="criancas" data-d="-1" aria-label="Menos uma criança">−</button><output id="criancas">0</output><button type="button" data-step="criancas" data-d="1" aria-label="Mais uma criança">+</button></div></div>
+        </div>
+        <div class="checks" id="extras">
+          <label class="check"><input type="checkbox" id="barraca">Vou dormir no sítio de sábado para domingo (levo barraca)</label>
+          <label class="check"><input type="checkbox" id="domingo">Vou curtir a piscina no domingo</label>
+        </div>
+        <div class="f">
+          <label for="tel">WHATSAPP (OPCIONAL)</label>
+          <input id="tel" name="telefone" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" placeholder="(31) 9 0000-0000">
+        </div>
+        <div class="f">
+          <label for="recado">RECADO PARA A JULYA (OPCIONAL)</label>
+          <textarea id="recado" name="recado" maxlength="400" placeholder="Deixe uma mensagem carinhosa"></textarea>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="site">Não preencha</label><input id="site" name="site" tabindex="-1" autocomplete="off"></div>
+        <button class="send" type="submit" id="send">ENVIAR RESPOSTA</button>
+        </div>
+        <p class="err" id="err" role="alert"></p>
+        <p class="alt">Prefere falar direto? <a id="wa1" target="_blank" rel="noopener">Confirme pelo WhatsApp</a></p>
+      </form>
+      <div class="done" id="done" hidden>
+        <p class="big" id="doneTitle">Obrigada!</p>
+        <p id="doneMsg"></p>
+        <button class="again" id="again" type="button">Enviar outra resposta</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Presentes -->
+  <section class="screen paper" id="s-gifts">
+    <div class="deco" data-mode="frame" data-seed="21"></div>
+    <div class="content">
+      <h2 class="t">Sugestões de presentes</h2>
+      <ul class="gifts" id="gifts"></ul>
+      <p class="gift-note">O mais importante é a sua presença nessa noite tão especial.</p>
+      <a class="wa" id="wa2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>(31) 99784-7088</a>
+    </div>
+  </section>
+</div>
+
+<script>
+(function(){
+  /* ====== Dados do convite ====== */
+  const EVENTO=new Date('2026-11-14T22:00:00-03:00');
+  const LOCAL='Sítio Pôr do Sol, Rua Flor do Oriente, 328, Jardim Recreio, Alvorada, Betim - MG';
+  const WHATS='5531997847088';
+  // Endereço do app do cerimonial (termina em /exec). Usado quando o convite fica no site próprio (GitHub).
+  const API='https://script.google.com/macros/s/AKfycbzaU4B5f1jKeCVu0cv81_hQXt_mbidIUjH8c6JobNolkr91J1IIVbORowREdjb8S5mWRw/exec';
+  const PRESENTES=['Roupas tamanho PP, P ou 14 anos','Calçados número 37','Acessórios','Perfumes','Maquiagem','Livros','Bolsas'];
+
+  /* ====== IMAGENS PRÓPRIAS (opcional) ======
+     Para usar artes feitas no Canva no lugar dos desenhos: salve a imagem no Google Drive,
+     compartilhe como "Qualquer pessoa com o link", copie o link e cole entre as aspas.
+     envelope  = arte das portinhas (a imagem inteira, que será cortada ao meio)
+     principal = fundo da tela principal (moldura com o meio vazio)
+     telas     = fundo das outras telas */
+  const IMAGENS={
+    envelope:'',
+    principal:'',
+    telas:''
+  };
+
+  const $=s=>document.querySelector(s);
+  const NS='http://www.w3.org/2000/svg';
+
+  /* ====== Estrela-do-mar orgânica (braços curvos e pontas arredondadas) ====== */
+  (function(){
+    const pts=[],cx=50,cy=50,rad=Math.PI/180;
+    for(let i=0;i<5;i++){
+      const a=-90+i*72,bend=i%2?4:-4;
+      const P=(ang,r)=>[cx+Math.cos(ang*rad)*r,cy+Math.sin(ang*rad)*r];
+      pts.push(P(a-36,15),P(a-12+bend*.3,28),P(a-5+bend,41),P(a+bend*1.2,47),P(a+5+bend,41),P(a+12+bend*.3,28));
+    }
+    const n=pts.length;let d=`M${pts[0][0].toFixed(1)} ${pts[0][1].toFixed(1)}`;
+    for(let i=0;i<n;i++){
+      const p0=pts[(i-1+n)%n],p1=pts[i],p2=pts[(i+1)%n],p3=pts[(i+2)%n],t=.18;
+      const c1=[p1[0]+(p2[0]-p0[0])*t,p1[1]+(p2[1]-p0[1])*t],c2=[p2[0]-(p3[0]-p1[0])*t,p2[1]-(p3[1]-p1[1])*t];
+      d+=` C${c1[0].toFixed(1)} ${c1[1].toFixed(1)} ${c2[0].toFixed(1)} ${c2[1].toFixed(1)} ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`;
+    }
+    document.getElementById('starPath').setAttribute('d',d+'Z');
+    let dots='';
+    for(let i=0;i<5;i++){const a=(-90+i*72+(i%2?4:-4)*.6)*rad;for(let r=10;r<=40;r+=5.5){const s=Math.max(.9,2.6-r*.04);dots+=`<circle cx="${(cx+Math.cos(a)*r).toFixed(1)}" cy="${(cy+Math.sin(a)*r).toFixed(1)}" r="${s.toFixed(2)}"/>`}}
+    document.getElementById('starDots').innerHTML=dots+'<circle cx="50" cy="50" r="2.4"/>';
+  })();
+
+  /* ====== Moldura de aquarela gerada para o tamanho de cada tela ====== */
+  function rng(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+  const SHAPES=[['scallop',4],['star',3.5],['nautilus',2],['conch',2],['coral',2.5],['weed',1.6],['jelly',1.2],['dollar',.8],['flower',2.2],['turtle',.9]];
+  const UPRIGHT={coral:1,weed:1,jelly:1};
+  const ARTE={}; // imagens já desenhadas, por tamanho de tela
+  // iPhone/iPad desenham os efeitos de textura bem mais devagar: lá usamos a versão leve
+  const LEVE=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  let defsTxt=null;
+  const DEFS=()=>defsTxt||(defsTxt='<defs>'+document.querySelector('#art-defs defs').innerHTML+'</defs>');
+  function pickShape(r){const tot=SHAPES.reduce((a,s)=>a+s[1],0);let x=r()*tot;for(const [n,w] of SHAPES){if((x-=w)<=0)return n}return 'scallop'}
+  const use=(sym,x,y,s,rot,fill,op)=>`<use href="#${sym}" xlink:href="#${sym}" x="${(-s/2).toFixed(1)}" y="${(-s/2).toFixed(1)}" width="${s.toFixed(1)}" height="${s.toFixed(1)}" transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${rot.toFixed(0)})" style="--f:${fill};opacity:${op}"/>`;
+
+  function frame(svg){
+    const w=svg.clientWidth,h=svg.clientHeight;if(!w||!h)return;
+    const mode=svg.dataset.mode,r=rng(Number(svg.dataset.seed)||1);
+    const sparks=[];
+    const band=Math.min(w,h)*(mode==='corners'?0.16:mode==='env'?0.19:0.2);
+    let back='',front='',bits='';
+    const edges=[ // [x0,y0,x1,y1, rotação para "em pé" apontando para dentro]
+      [0,0,w,0,180],[w,0,w,h,-90],[w,h,0,h,0],[0,h,0,0,90]];
+    const place=(x,y,ang,layer)=>{
+      const sym=pickShape(r);
+      const big=layer==='back';
+      const s=band*(big?0.75+r()*0.55:0.48+r()*0.4);
+      const rot=UPRIGHT[sym]?ang+(r()*40-20):r()*360;
+      const fill=big?(r()<.6?'url(#gL)':'url(#gM)'):(r()<.55?'url(#gM)':'url(#gD)');
+      const html=use(sym,x,y,s,rot,fill,big?.78:.95);
+      if(big)back+=html;else front+=html;
+    };
+    if(mode==='corners'){
+      [[0,0,135],[w,0,-135],[w,h,-45],[0,h,45]].forEach(([cx,cy,dir])=>{
+        for(let k=0;k<9;k++){
+          const dist=r()*band*1.25,a=(dir+90)*Math.PI/180+(r()*90-45)*Math.PI/180;
+          const xx=cx===0?Math.abs(Math.cos(a))*dist:w-Math.abs(Math.cos(a))*dist;
+          const yy=cy===0?Math.abs(Math.sin(a))*dist:h-Math.abs(Math.sin(a))*dist;
+          const up=cy===0?180:0;
+          place(xx,yy,up,k<4?'back':'front');
+        }
+      });
+    } else {
+      edges.forEach(([x0,y0,x1,y1,ang])=>{
+        const L=Math.hypot(x1-x0,y1-y0),nx=(y1-y0)/L,ny=-(x1-x0)/L; // normal para fora (sentido horário)
+        ['back','front'].forEach(layer=>{
+          const step=band*(layer==='back'?0.62:0.78);
+          for(let t=r()*step*.5;t<L;t+=step*(0.75+r()*0.5)){
+            const inset=r()*band*(layer==='back'?0.45:0.6);
+            place(x0+(x1-x0)*t/L-nx*inset,y0+(y1-y0)*t/L-ny*inset,ang,layer);
+          }
+        });
+      });
+      [[0,0],[w,0],[w,h],[0,h]].forEach(([cx,cy])=>{
+        const x=cx?w-band*.35:band*.35,y=cy?h-band*.35:band*.35;
+        front+=use(r()<.5?'scallop':'nautilus',x,y,band*1.15,r()*360,'url(#gD)',.92);
+      });
+    }
+    for(let i=0;i<14;i++){ // pérolas perto da borda interna
+      const e=edges[Math.floor(r()*4)],t=r();
+      const x=e[0]+(e[2]-e[0])*t,y=e[1]+(e[3]-e[1])*t,L=Math.hypot(e[2]-e[0],e[3]-e[1]);
+      const nx=(e[3]-e[1])/L,ny=-(e[2]-e[0])/L,inset=band*(0.7+r()*0.35);
+      if(mode==='corners'&&!(t<.25||t>.75))continue;
+      bits+=use('pearl',x-nx*inset,y-ny*inset,band*(0.09+r()*0.07),0,'none',.95);
+    }
+    for(let i=0;i<70;i++){ // pontinhos dourados, mais perto da moldura
+      const x=r()*w,y=r()*h,edge=Math.min(x,y,w-x,h-y);
+      if(edge>band*1.4&&r()<.8)continue;
+      bits+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(0.7+r()*1.6).toFixed(2)}" fill="url(#gGold)" opacity="${(0.55+r()*0.4).toFixed(2)}"/>`;
+    }
+    for(let i=0;i<9;i++){ // poucos brilhos que piscam
+      const e=edges[Math.floor(r()*4)],t=r(),L=Math.hypot(e[2]-e[0],e[3]-e[1]);
+      const nx=(e[3]-e[1])/L,ny=-(e[2]-e[0])/L,inset=band*(0.55+r()*0.6),s=3+r()*4;
+      const x=e[0]+(e[2]-e[0])*t-nx*inset,y=e[1]+(e[3]-e[1])*t-ny*inset;
+      sparks.push([x,y,s*2.2,(r()*3).toFixed(2)]);
+    }
+    // manchas de aquarela no fundo, perto das bordas
+    let wash='';
+    for(let i=0;i<12;i++){
+      const e=edges[i%4],t=r(),L=Math.hypot(e[2]-e[0],e[3]-e[1]);
+      const nx=(e[3]-e[1])/L,ny=-(e[2]-e[0])/L,inset=band*(0.1+r()*0.7);
+      if(mode==='corners'&&t>.3&&t<.7)continue;
+      const x=e[0]+(e[2]-e[0])*t-nx*inset,y=e[1]+(e[3]-e[1])*t-ny*inset,rx=band*(0.7+r()*0.9),ry=band*(0.45+r()*0.6);
+      wash+=`<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="${rx.toFixed(1)}" ry="${ry.toFixed(1)}" fill="${r()<.55?'#9DB8EA':'#C9D9F3'}" opacity="${(0.22+r()*0.2).toFixed(2)}" transform="rotate(${(r()*180).toFixed(0)} ${x.toFixed(1)} ${y.toFixed(1)})"/>`;
+    }
+    // desenhos em linha dourada, atrás das conchas (como gravura)
+    let line='';
+    const LINHA=['scallop','nautilus','conch','star','flower'];
+    for(let i=0;i<(mode==='corners'?6:12);i++){
+      const e=edges[Math.floor(r()*4)],t=r(),L=Math.hypot(e[2]-e[0],e[3]-e[1]);
+      if(mode==='corners'&&t>.28&&t<.72)continue;
+      const nx=(e[3]-e[1])/L,ny=-(e[2]-e[0])/L,inset=band*(0.6+r()*0.7),s=band*(0.45+r()*0.45);
+      const x=e[0]+(e[2]-e[0])*t-nx*inset,y=e[1]+(e[3]-e[1])*t-ny*inset;
+      const ls=LINHA[Math.floor(r()*LINHA.length)];
+      line+=`<use href="#${ls}" xlink:href="#${ls}" x="${(-s/2).toFixed(1)}" y="${(-s/2).toFixed(1)}" width="${s.toFixed(1)}" height="${s.toFixed(1)}" transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(r()*360).toFixed(0)})" style="--f:none;stroke:url(#gGold);stroke-width:1.6;opacity:.75"/>`;
+    }
+    // vira uma imagem só: o celular desenha uma vez e depois apenas rola a tela
+    const chave=[mode,svg.dataset.seed,w,h].join('-');
+    if(!ARTE[chave]){
+      const wcF=LEVE?'':' filter="url(#wc)"';
+      const doc=`<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">${DEFS()}<g filter="url(#${LEVE?'washLite':'wash'})">${wash}</g>${line}<g${wcF}>${back}</g><g${wcF}>${front}</g>${bits}</svg>`;
+      ARTE[chave]={url:URL.createObjectURL(new Blob([doc],{type:'image/svg+xml'})),
+        sparks:sparks.map(([x,y,s,dl])=>`<i class="spark" style="left:${(x-s).toFixed(0)}px;top:${(y-s).toFixed(0)}px;width:${(s*2).toFixed(0)}px;height:${(s*2).toFixed(0)}px;animation-delay:${dl}s"></i>`).join('')};
+    }
+    svg.style.backgroundImage='url("'+ARTE[chave].url+'")';
+    svg.innerHTML=ARTE[chave].sparks;
+    const c=svg.parentElement.querySelector('.content');
+    if(c&&mode!=='env'){
+      const px=mode==='corners'?Math.max(28,band*0.55):Math.max(40,band*0.92);
+      const py=mode==='corners'?Math.max(56,band*1.05):Math.max(64,band*1.08);
+      c.style.padding=`${py}px ${px}px`;
+      requestAnimationFrame(()=>{ // a tela cresce com o conteúdo; redesenha se mudou a altura
+        if(Math.abs(svg.clientHeight-h)>40) frame(svg);
+      });
+    }
+  }
+  let lastW=0;
+  function frameAll(){document.querySelectorAll('.deco[data-feito]').forEach(frame);lastW=window.innerWidth}
+  // as telas são desenhadas aos poucos, quando estão chegando perto de aparecer
+  const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){io.unobserve(e.target);e.target.dataset.feito='1';frame(e.target)}
+  }),{rootMargin:'900px 0px'}):null;
+  function observar(){
+    document.querySelectorAll('.screen .deco').forEach(d=>{
+      if(d.dataset.feito||d.dataset.vendo)return;
+      if(io){d.dataset.vendo='1';io.observe(d)}else{d.dataset.feito='1';frame(d)}
+    });
+  }
+  let rt=null;
+  window.addEventListener('resize',()=>{if(Math.abs(window.innerWidth-lastW)<2)return;clearTimeout(rt);rt=setTimeout(frameAll,200)});
+
+  /* ====== Envelope ====== */
+  const cover=$('#cover');
+  function abrir(){
+    if(cover.classList.contains('open'))return;
+    cover.classList.add('open');
+    document.body.classList.remove('locked');
+    observar();
+    setTimeout(()=>cover.classList.add('gone'),1800);
+  }
+  $('#seal').addEventListener('click',abrir);
+  cover.addEventListener('click',e=>{if(e.target.closest('.door'))abrir()});
+
+  /* ====== Links e conteúdo ====== */
+  $('#maps').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(LOCAL);
+  $('#agenda').href='https://calendar.google.com/calendar/render?action=TEMPLATE'
+    +'&text='+encodeURIComponent('15 Anos da Julya Charlotte')
+    +'&dates=20261114T220000/20261115T040000&ctz=America/Sao_Paulo'
+    +'&location='+encodeURIComponent(LOCAL)+'&details='+encodeURIComponent('Traje social, azul e branco.');
+  const waLink='https://wa.me/'+WHATS+'?text='+encodeURIComponent('Olá! Quero confirmar minha presença nos 15 anos da Julya Charlotte.');
+  $('#wa1').href=waLink;$('#wa2').href='https://wa.me/'+WHATS;
+  $('#gifts').innerHTML=PRESENTES.map(p=>'<li>'+p.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))+'</li>').join('');
+  document.querySelectorAll('[data-go]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.getElementById(a.dataset.go).scrollIntoView({behavior:'smooth',block:'start'})}));
+
+  /* ====== Contagem regressiva ====== */
+  const pad=n=>String(n).padStart(2,'0');
+  function tick(){
+    let ms=EVENTO-new Date();
+    if(ms<=0){$('#count').hidden=true;$('#count-label').textContent=ms>-6*3600e3?'A festa está acontecendo agora!':'Obrigada por celebrar com a gente!';return}
+    const d=Math.floor(ms/864e5);ms-=d*864e5;const h=Math.floor(ms/36e5);ms-=h*36e5;const m=Math.floor(ms/6e4);ms-=m*6e4;const s=Math.floor(ms/1e3);
+    $('#cd-d').textContent=d;$('#cd-h').textContent=pad(h);$('#cd-m').textContent=pad(m);$('#cd-s').textContent=pad(s);
+  }
+  tick();setInterval(tick,1000);
+
+  /* ====== Confirmação de presença ====== */
+  /* convite personalizado: link com ?c=código mostra o nome e os lugares reservados */
+  let convite=null; // {id,nome,adultos,criancas,status}
+  const lim={adultos:{min:1,max:20},criancas:{min:0,max:20}};
+  const qtd={adultos:1,criancas:0};
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  function aplicarConvite(c){
+    if(!c||!c.nome)return;
+    convite=c;
+    document.querySelectorAll('.env-for').forEach(e=>{e.textContent='Convite para '+c.nome;e.hidden=false});
+    $('#forName').textContent=c.nome;$('#forMain').hidden=false;
+    $('#nomeBox').hidden=true;$('#nome').value=c.nome;
+    const total=c.adultos+c.criancas;
+    lim.adultos={min:c.adultos>0?1:0,max:c.adultos};lim.criancas={min:0,max:c.criancas};
+    qtd.adultos=c.adultos;qtd.criancas=c.criancas;
+    $('#adultos').textContent=qtd.adultos;$('#criancas').textContent=qtd.criancas;
+    $('#boxCriancas').hidden=c.criancas===0;
+    $('#qtd').dataset.fixo=total<=1?'1':'';
+    let txt=`<b>${esc(c.nome)}</b><br>Reservamos ${total===1?'1 lugar':total+' lugares'} para você.`;
+    if(c.status==='Confirmado')txt+='<br><em>Você já confirmou. Se mudar algo, é só enviar de novo.</em>';
+    if(c.status==='Não vai')txt+='<br><em>Você avisou que não poderá ir. Se mudar de ideia, responda de novo.</em>';
+    $('#reserva').innerHTML=txt;$('#reserva').hidden=false;
+    $('#resto').hidden=false;$('#err').textContent='';
+    syncVai();
+    if(c.fds){$('#s-fds').hidden=false;$('#teaser').hidden=false}
+    setTimeout(frameAll,50);
+  }
+  document.querySelectorAll('[data-step]').forEach(b=>b.addEventListener('click',()=>{
+    const k=b.dataset.step;qtd[k]=Math.max(lim[k].min,Math.min(lim[k].max,qtd[k]+Number(b.dataset.d)));$('#'+k).textContent=qtd[k];
+  }));
+  function syncVai(){
+    const sim=$('#vai-sim').checked;
+    $('#qtd').hidden=!sim||$('#qtd').dataset.fixo==='1';
+    $('#extras').hidden=!sim||!(convite&&convite.fds);
+    document.querySelectorAll('.choice label').forEach(l=>l.classList.toggle('on',l.querySelector('input').checked));
+  }
+  /* fala com o app do cerimonial: dentro do Google usa google.script.run; no site próprio usa o endereço API */
+  const noGoogle=!!(window.google&&google.script&&google.script.run);
+  const podeEnviar=()=>noGoogle||!!API;
+  function chamar(acao,dados){
+    if(noGoogle) return new Promise((res,rej)=>{
+      const r=google.script.run.withSuccessHandler(res).withFailureHandler(rej);
+      if(acao==='buscar')r.buscarConvite(dados.nome);else if(acao==='convite')r.getConvite(dados.id);else r.confirmarConvite(dados.dados);
+    });
+    if(!API) return Promise.reject(new Error('SEM_API'));
+    return fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(Object.assign({acao},dados))})
+      .then(r=>r.json()).then(j=>{if(!j||!j.ok)throw new Error((j&&j.erro)||'ERRO');return j.dados!==undefined?j.dados:j});
+  }
+  const abrirPorCodigo=c=>{if(c&&/^[A-Za-z0-9]{4,40}$/.test(c))chamar('convite',{id:c}).then(d=>{if(d)aplicarConvite(Object.assign({id:c},d))}).catch(()=>{})};
+  if(window.google&&google.script&&google.script.url){
+    google.script.url.getLocation(loc=>abrirPorCodigo(loc&&loc.parameter&&loc.parameter.c));
+  } else if(new URLSearchParams(location.search).get('c')){
+    abrirPorCodigo(new URLSearchParams(location.search).get('c'));
+  } else if(location.hash==='#exemplo'){
+    aplicarConvite({id:'exemplo',nome:'Ana Beatriz Ferreira',adultos:2,criancas:1,status:'Pendente',fds:true});
+  } else if(location.hash==='#exemplo2'){
+    aplicarConvite({id:'exemplo2',nome:'Carlos Eduardo Souza',adultos:1,criancas:0,status:'Pendente',fds:false});
+  }
+  document.querySelectorAll('input[name=vai]').forEach(x=>x.addEventListener('change',syncVai));syncVai();
+
+  /* link geral: a pessoa digita o nome completo e o convite procura na lista */
+  function buscar(){
+    const nome=$('#nome').value.trim();
+    if(nome.split(/\s+/).filter(w=>w.length>1).length<2){$('#err').textContent='Escreva seu nome e sobrenome, como está no convite.';$('#nome').focus();return}
+    if(!podeEnviar()){$('#err').textContent='Não foi possível buscar daqui. Confirme pelo WhatsApp logo abaixo.';return}
+    const b=$('#buscar');b.disabled=true;b.textContent='PROCURANDO…';$('#err').textContent='';
+    const fim=()=>{b.disabled=false;b.textContent='ENCONTRAR MEU CONVITE'};
+    chamar('buscar',{nome})
+      .then(d=>{fim();
+        if(d)aplicarConvite(d);
+        else $('#err').textContent='Não encontramos esse nome na lista. Confira se escreveu o nome completo ou fale com a gente pelo WhatsApp.';})
+      .catch(()=>{fim();$('#err').textContent='Não foi possível buscar agora. Tente de novo em instantes.'});
+  }
+  $('#buscar').addEventListener('click',buscar);
+
+  $('#form').addEventListener('submit',e=>{
+    e.preventDefault();
+    if(!convite){buscar();return}
+    const nome=$('#nome').value.trim();
+    if(nome.length<2){$('#err').textContent='Escreva seu nome para a gente saber quem confirmou.';$('#nome').focus();return}
+    const vai=$('#vai-sim').checked?'sim':'nao';
+    const dados={id:convite?convite.id:'',nome,vai,adultos:qtd.adultos,criancas:qtd.criancas,
+      barraca:vai==='sim'&&!!(convite&&convite.fds)&&$('#barraca').checked,domingo:vai==='sim'&&!!(convite&&convite.fds)&&$('#domingo').checked,
+      telefone:$('#tel').value.trim(),recado:$('#recado').value.trim(),site:$('#site').value};
+    if(!podeEnviar()){$('#err').textContent='Não foi possível enviar daqui. Confirme pelo WhatsApp logo abaixo.';return}
+    $('#err').textContent='';$('#send').disabled=true;$('#send').textContent='ENVIANDO…';
+    const liberar=()=>{$('#send').disabled=false;$('#send').textContent='ENVIAR RESPOSTA'};
+    chamar('confirmar',{dados})
+      .then(()=>{
+        liberar();$('#form').hidden=true;$('#done').hidden=false;
+        const primeiro=nome.split(' ')[0];
+        if(vai==='sim'){
+          const total=qtd.adultos+qtd.criancas;
+          $('#doneTitle').textContent='Obrigada, '+primeiro+'!';
+          $('#doneMsg').textContent='Sua presença está confirmada'+(total>1?' para '+total+' pessoas':'')+'. Nos vemos no dia 14 de novembro!';
+        } else {
+          $('#doneTitle').textContent='Que pena, '+primeiro+'!';
+          $('#doneMsg').textContent='Obrigada por avisar. Você vai fazer falta.';
+        }
+      })
+      .catch(err=>{
+        liberar();
+        const m=String(err&&err.message||err);
+        $('#err').textContent=m.indexOf('NAO_ENCONTRADO')>-1?'Não encontramos seu convite na lista. Fale com a gente pelo WhatsApp.':m.indexOf('LIMITE')>-1?'Muitas respostas agora. Tente de novo em alguns minutos ou confirme pelo WhatsApp.':'Não foi possível enviar. Verifique a internet e tente de novo.';
+      });
+  });
+  $('#again').addEventListener('click',()=>{
+    $('#form').reset();
+    qtd.adultos=convite?convite.adultos:1;qtd.criancas=convite?convite.criancas:0;
+    if(convite)$('#nome').value=convite.nome;
+    $('#adultos').textContent=qtd.adultos;$('#criancas').textContent=qtd.criancas;syncVai();
+    $('#done').hidden=true;$('#form').hidden=false;$('#nome').focus();
+  });
+
+  /* desenha as molduras depois que as fontes carregam (o tamanho das telas depende delas) */
+  function driveUrl(l){
+    if(!l)return '';
+    const m=String(l).match(/\/d\/([A-Za-z0-9_-]{20,})|[?&]id=([A-Za-z0-9_-]{20,})/);
+    return m?'https://lh3.googleusercontent.com/d/'+(m[1]||m[2]):String(l);
+  }
+  function aplicarImagens(){
+    const usar=(el,url)=>{
+      if(!el||!url)return;
+      el.style.backgroundImage='url("'+url.replace(/"/g,'')+'")';el.style.backgroundSize='cover';el.style.backgroundPosition='center';
+      const s=el.querySelector(':scope > .deco');if(s)s.remove();
+    };
+    const env=driveUrl(IMAGENS.envelope);if(env)document.querySelectorAll('.door .art').forEach(a=>usar(a,env));
+    usar(document.getElementById('s-main'),driveUrl(IMAGENS.principal));
+    const t=driveUrl(IMAGENS.telas);if(t)['s-fds','s-rsvp','s-gifts'].forEach(id=>usar(document.getElementById(id),t));
+  }
+  aplicarImagens();
+  document.querySelectorAll('.env .deco').forEach(d=>{d.dataset.feito='1'}); // primeiro só o envelope
+  frameAll();
+  setTimeout(observar,1500); // as outras telas, enquanto a pessoa olha o envelope
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(frameAll);
+})();
+</script>
+</body>
+</html>
